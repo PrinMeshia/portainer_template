@@ -3813,22 +3813,6 @@
                     "container": "/etc/localtime:ro",
                     "bind": "/etc/localtime"
                 }
-            ],
-            "env": [
-                {
-                    "name": "PUID",
-                    "label": "PUID",
-                    "default": "1000"
-                },
-                {
-                    "name": "PGID",
-                    "label": "PGID",
-                    "default": "100"
-                },
-                {
-                    "name": "TZ",
-                    "label": "TZ"
-                }
             ]
         }
     ]
