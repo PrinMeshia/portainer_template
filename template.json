@@ -3810,8 +3810,8 @@
                     "bind": "/portainer/Files/AppData/Config/hassio"
                 },
                 {
-                    "container": "/etc/localtime",
-                    "bind": "/etc/localtime:ro"
+                    "container": "/etc/localtime:ro",
+                    "bind": "/etc/localtime"
                 }
             ],
             "env": [
