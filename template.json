@@ -3791,5 +3791,30 @@
         "default": "100"
       }
     ]
-  }
+  },
+  {
+    "type": 1,
+    "title": "Home assistant",
+    "name": "Home_assistant",
+    "description": "Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server. ",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Home_Assistant_Logo.svg",
+    "image": "homeassistant/home-assistant:stable",
+    "categories": [
+      "HomeAutomation",
+      "Management"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "network": "host",
+    "volumes": [
+      {   
+        "container": "/config",
+        "bind": "/portainer/Files/AppData/Config/hassio"
+      },
+      {
+        "container": "/etc/localtime:ro",
+        "bind": "/etc/localtime"
+      }
+    ],
+  },
 ]}
