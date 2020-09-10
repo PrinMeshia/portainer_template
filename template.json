@@ -3793,7 +3793,7 @@
         {
             "type": 1,
             "title": "Home assistant",
-            "name": "Home_assistant",
+            "name": "Home-assistant",
             "description": "Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server. ",
             "logo": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Home_Assistant_Logo.svg",
             "image": "homeassistant/home-assistant:stable",
@@ -3810,8 +3810,14 @@
                     "bind": "/portainer/Files/AppData/Config/hassio"
                 },
                 {
-                    "container": "/etc/localtime:ro",
-                    "bind": "/etc/localtime"
+                    "container": "/etc/localtime",
+                    "bind": "/etc/localtime:ro"
+                }
+            ],
+            "env": [
+                {
+                    "name": "TZ",
+                    "label": "TZ"
                 }
             ]
         }
