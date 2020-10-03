@@ -3814,6 +3814,34 @@
                     "bind": "/etc/localtime"
                 }
             ]
+        },
+        {
+            "type": 1,
+            "title": "JeeDom",
+            "name": "JeeDom",
+            "description": "Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server. ",
+            "logo": "https://www.jeedom.com/logo.png",
+            "image": "jeedom/jeedom:latest",
+            "categories": [
+                "HomeAutomation",
+                "Management"
+            ],
+            "platform": "linux",
+            "restart_policy": "unless-stopped",
+            "network": "host",
+            "ports": [
+                "9080:80/tcp"
+            ],
+            "volumes": [
+                {
+                    "container": "/var/www/html",
+                    "bind": "/portainer/Files/AppData/Config/jeedom/html"
+                },
+                {
+                    "container": "/var/lib/mysql",
+                    "bind": "/portainer/Files/AppData/Config/jeedom/db"
+                }
+            ]
         }
     ]
 }
